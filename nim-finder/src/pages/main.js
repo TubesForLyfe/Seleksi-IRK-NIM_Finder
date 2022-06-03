@@ -170,11 +170,11 @@ const Main = () => {
     <div className='container'>
       <div className='finder'>
         <h2>NIM Finder Application</h2>
-        <h5>by TubesForLyfe</h5>
+        <h4>by TubesForLyfe</h4>
         <div className='input'>
             <div className='margin-top-20'>
                 <p>Ketik di sini untuk melakukan pencarian</p>
-                <input type="text" className='w-75 radius-10 padding-left-5' onChange={((e) => getMahasiswa(e))}/>
+                <input type="text" className='w50 radius-10 padding-left-5' onChange={((e) => getMahasiswa(e))}/>
             </div>
             {(mahasiswa.length > 0) && <div className='margin-top-20'>
                 {mahasiswa.map((val, key) => {
@@ -183,17 +183,17 @@ const Main = () => {
                             <hr></hr>
                             {val.tpb && <div>
                                 <div className='left'>
-                                    <h5 className='margin-left-20'>{val.nama}</h5>
+                                    <h4 className='margin-left-20'>{val.nama}</h4>
                                     <p className='margin-left-20 grey'><i>{val.fakultas}</i></p> 
                                 </div>
                                 <div className='right'>
                                     <p className='margin-right-20 grey'>{val.nim}</p>
                                 </div>
                             </div>}
-                            {val.tpb && <p className='margin-bot-90'></p>}
+                            {val.tpb && <p className='margin-bot-110'></p>}
                             {!val.tpb && <div>
                                 <div className='left'>
-                                    <h5 className='margin-left-20'>{val.nama}</h5>
+                                    <h4 className='margin-left-20'>{val.nama}</h4>
                                     <p className='margin-left-20 grey'><i>{val.jurusan}</i></p>
                                     <p className='margin-left-20 grey'><i>{val.fakultas}</i></p>   
                                 </div>
@@ -202,7 +202,7 @@ const Main = () => {
                                     <p className='margin-right-20 grey'>{val.nim_tpb}</p>
                                 </div>
                             </div>}
-                            {!val.tpb && <p className='margin-bot-128'></p>}
+                            {!val.tpb && <p className='margin-bot-145'></p>}
                         </div>
                     )
                 })}
